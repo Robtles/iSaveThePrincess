@@ -7,21 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D4346F0E1F47442E00A4099F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4346F0D1F47442E00A4099F /* AppDelegate.swift */; };
-		D4346F101F47442E00A4099F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4346F0F1F47442E00A4099F /* ViewController.swift */; };
-		D4346F131F47442E00A4099F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4346F111F47442E00A4099F /* Main.storyboard */; };
-		D4346F151F47442E00A4099F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4346F141F47442E00A4099F /* Assets.xcassets */; };
-		D4346F181F47442E00A4099F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4346F161F47442E00A4099F /* LaunchScreen.storyboard */; };
+		D4B9F41A1F4795E400579235 /* STPAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B9F4181F4795E400579235 /* STPAppDelegate.swift */; };
+		D4B9F41C1F47961D00579235 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4B9F41B1F47961D00579235 /* Assets.xcassets */; };
+		D4B9F41F1F47962500579235 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4B9F41D1F47962500579235 /* LaunchScreen.storyboard */; };
+		D4B9F4201F47962500579235 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4B9F41E1F47962500579235 /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		D4346F0A1F47442E00A4099F /* iSaveThePrincess.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iSaveThePrincess.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		D4346F0D1F47442E00A4099F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D4346F0F1F47442E00A4099F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		D4346F121F47442E00A4099F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		D4346F141F47442E00A4099F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		D4346F171F47442E00A4099F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		D4346F191F47442E00A4099F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D4B9F4171F4795E400579235 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Base/Info.plist; sourceTree = "<group>"; };
+		D4B9F4181F4795E400579235 /* STPAppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = STPAppDelegate.swift; path = Base/STPAppDelegate.swift; sourceTree = "<group>"; };
+		D4B9F41B1F47961D00579235 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = Base/Assets.xcassets; sourceTree = "<group>"; };
+		D4B9F41D1F47962500579235 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = Storyboards/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D4B9F41E1F47962500579235 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Storyboards/Main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +52,29 @@
 		D4346F0C1F47442E00A4099F /* iSaveThePrincess */ = {
 			isa = PBXGroup;
 			children = (
-				D4346F0D1F47442E00A4099F /* AppDelegate.swift */,
-				D4346F0F1F47442E00A4099F /* ViewController.swift */,
-				D4346F111F47442E00A4099F /* Main.storyboard */,
-				D4346F141F47442E00A4099F /* Assets.xcassets */,
-				D4346F161F47442E00A4099F /* LaunchScreen.storyboard */,
-				D4346F191F47442E00A4099F /* Info.plist */,
+				D4B9F4161F4795B500579235 /* Storyboards */,
+				D4B9F4131F47942400579235 /* Base */,
 			);
 			path = iSaveThePrincess;
+			sourceTree = "<group>";
+		};
+		D4B9F4131F47942400579235 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				D4B9F41B1F47961D00579235 /* Assets.xcassets */,
+				D4B9F4171F4795E400579235 /* Info.plist */,
+				D4B9F4181F4795E400579235 /* STPAppDelegate.swift */,
+			);
+			name = Base;
+			sourceTree = "<group>";
+		};
+		D4B9F4161F4795B500579235 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				D4B9F41D1F47962500579235 /* LaunchScreen.storyboard */,
+				D4B9F41E1F47962500579235 /* Main.storyboard */,
+			);
+			name = Storyboards;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -124,9 +137,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D4346F181F47442E00A4099F /* LaunchScreen.storyboard in Resources */,
-				D4346F151F47442E00A4099F /* Assets.xcassets in Resources */,
-				D4346F131F47442E00A4099F /* Main.storyboard in Resources */,
+				D4B9F41F1F47962500579235 /* LaunchScreen.storyboard in Resources */,
+				D4B9F41C1F47961D00579235 /* Assets.xcassets in Resources */,
+				D4B9F4201F47962500579235 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,31 +150,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D4346F101F47442E00A4099F /* ViewController.swift in Sources */,
-				D4346F0E1F47442E00A4099F /* AppDelegate.swift in Sources */,
+				D4B9F41A1F4795E400579235 /* STPAppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		D4346F111F47442E00A4099F /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D4346F121F47442E00A4099F /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		D4346F161F47442E00A4099F /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D4346F171F47442E00A4099F /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		D4346F1A1F47442E00A4099F /* Debug */ = {
@@ -262,7 +255,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = SRD9PR5GCG;
-				INFOPLIST_FILE = iSaveThePrincess/Info.plist;
+				INFOPLIST_FILE = iSaveThePrincess/Base/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.rob.iSaveThePrincess;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -275,7 +269,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = SRD9PR5GCG;
-				INFOPLIST_FILE = iSaveThePrincess/Info.plist;
+				INFOPLIST_FILE = iSaveThePrincess/Base/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.rob.iSaveThePrincess;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -302,6 +297,7 @@
 				D4346F1E1F47442E00A4099F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
