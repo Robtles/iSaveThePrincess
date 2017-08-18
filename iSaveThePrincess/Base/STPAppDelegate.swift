@@ -12,5 +12,11 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+
+    func applicationDidFinishLaunching(_ application: UIApplication) {
+        
+        // Status bar initially hidden from the Info.plist file, then show it again.
+        UIApplication.shared.isStatusBarHidden = false
+    }
 }
 
