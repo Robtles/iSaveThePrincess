@@ -11,6 +11,11 @@
 		D4B9F41C1F47961D00579235 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4B9F41B1F47961D00579235 /* Assets.xcassets */; };
 		D4B9F41F1F47962500579235 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4B9F41D1F47962500579235 /* LaunchScreen.storyboard */; };
 		D4B9F4201F47962500579235 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4B9F41E1F47962500579235 /* Main.storyboard */; };
+		D4B9F42A1F47A65900579235 /* STPManagedSoldier.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B9F4291F47A65900579235 /* STPManagedSoldier.swift */; };
+		D4B9F42C1F47A67800579235 /* STPRealmHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B9F42B1F47A67800579235 /* STPRealmHelper.swift */; };
+		D4B9F4301F47A6C200579235 /* STPSoldier+Persistable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B9F42F1F47A6C200579235 /* STPSoldier+Persistable.swift */; };
+		D4B9F4321F47A6D300579235 /* STPSoldier.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B9F4311F47A6D300579235 /* STPSoldier.swift */; };
+		D4B9F4341F47A92800579235 /* STPConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B9F4331F47A92800579235 /* STPConstants.swift */; };
 		EE1DC0A98C6DE0A815594F7A /* Pods_iSaveThePrincess.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8922BDC9FEB38B24DDBF4AB /* Pods_iSaveThePrincess.framework */; };
 /* End PBXBuildFile section */
 
@@ -24,6 +29,11 @@
 		D4B9F41B1F47961D00579235 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = Base/Assets.xcassets; sourceTree = "<group>"; };
 		D4B9F41D1F47962500579235 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = Storyboards/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D4B9F41E1F47962500579235 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Storyboards/Main.storyboard; sourceTree = "<group>"; };
+		D4B9F4291F47A65900579235 /* STPManagedSoldier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = STPManagedSoldier.swift; path = "Object Store/Schema/STPManagedSoldier.swift"; sourceTree = "<group>"; };
+		D4B9F42B1F47A67800579235 /* STPRealmHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = STPRealmHelper.swift; path = "Object Store/Core/STPRealmHelper.swift"; sourceTree = "<group>"; };
+		D4B9F42F1F47A6C200579235 /* STPSoldier+Persistable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "STPSoldier+Persistable.swift"; path = "Model/Persistable/STPSoldier+Persistable.swift"; sourceTree = "<group>"; };
+		D4B9F4311F47A6D300579235 /* STPSoldier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = STPSoldier.swift; path = Model/Schema/STPSoldier.swift; sourceTree = "<group>"; };
+		D4B9F4331F47A92800579235 /* STPConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = STPConstants.swift; path = Base/STPConstants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +86,8 @@
 		D4346F0C1F47442E00A4099F /* iSaveThePrincess */ = {
 			isa = PBXGroup;
 			children = (
+				D4B9F4241F47A59E00579235 /* Object Store */,
+				D4B9F4231F47A55C00579235 /* Model */,
 				D4B9F4161F4795B500579235 /* Storyboards */,
 				D4B9F4131F47942400579235 /* Base */,
 			);
@@ -88,6 +100,7 @@
 				D4B9F41B1F47961D00579235 /* Assets.xcassets */,
 				D4B9F4171F4795E400579235 /* Info.plist */,
 				D4B9F4181F4795E400579235 /* STPAppDelegate.swift */,
+				D4B9F4331F47A92800579235 /* STPConstants.swift */,
 			);
 			name = Base;
 			sourceTree = "<group>";
@@ -99,6 +112,56 @@
 				D4B9F41E1F47962500579235 /* Main.storyboard */,
 			);
 			name = Storyboards;
+			sourceTree = "<group>";
+		};
+		D4B9F4231F47A55C00579235 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D4B9F4281F47A60D00579235 /* Schema */,
+				D4B9F4271F47A60500579235 /* Persistable */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		D4B9F4241F47A59E00579235 /* Object Store */ = {
+			isa = PBXGroup;
+			children = (
+				D4B9F4261F47A5BE00579235 /* Schema */,
+				D4B9F4251F47A5BA00579235 /* Core */,
+			);
+			name = "Object Store";
+			sourceTree = "<group>";
+		};
+		D4B9F4251F47A5BA00579235 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				D4B9F42B1F47A67800579235 /* STPRealmHelper.swift */,
+			);
+			name = Core;
+			sourceTree = "<group>";
+		};
+		D4B9F4261F47A5BE00579235 /* Schema */ = {
+			isa = PBXGroup;
+			children = (
+				D4B9F4291F47A65900579235 /* STPManagedSoldier.swift */,
+			);
+			name = Schema;
+			sourceTree = "<group>";
+		};
+		D4B9F4271F47A60500579235 /* Persistable */ = {
+			isa = PBXGroup;
+			children = (
+				D4B9F42F1F47A6C200579235 /* STPSoldier+Persistable.swift */,
+			);
+			name = Persistable;
+			sourceTree = "<group>";
+		};
+		D4B9F4281F47A60D00579235 /* Schema */ = {
+			isa = PBXGroup;
+			children = (
+				D4B9F4311F47A6D300579235 /* STPSoldier.swift */,
+			);
+			name = Schema;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -225,7 +288,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D4B9F42A1F47A65900579235 /* STPManagedSoldier.swift in Sources */,
+				D4B9F4301F47A6C200579235 /* STPSoldier+Persistable.swift in Sources */,
+				D4B9F42C1F47A67800579235 /* STPRealmHelper.swift in Sources */,
+				D4B9F4341F47A92800579235 /* STPConstants.swift in Sources */,
 				D4B9F41A1F4795E400579235 /* STPAppDelegate.swift in Sources */,
+				D4B9F4321F47A6D300579235 /* STPSoldier.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
