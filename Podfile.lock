@@ -1,0 +1,39 @@
+PODS:
+  - EZSwiftExtensions (1.10)
+  - Realm (2.8.3):
+    - Realm/Headers (= 2.8.3)
+  - Realm/Headers (2.8.3)
+  - RealmSwift (2.8.3):
+    - Realm (= 2.8.3)
+  - SCLAlertView (0.7.0)
+  - Spring (1.0.3)
+  - SVColorPicker (2.0.1)
+
+DEPENDENCIES:
+  - EZSwiftExtensions
+  - RealmSwift
+  - SCLAlertView
+  - Spring (from `https://github.com/MengTo/Spring.git`, branch `swift3`)
+  - SVColorPicker (= 2.0.1)
+
+EXTERNAL SOURCES:
+  Spring:
+    :branch: swift3
+    :git: https://github.com/MengTo/Spring.git
+
+CHECKOUT OPTIONS:
+  Spring:
+    :commit: 8201b5c93bd7ebdf4cd18160bcde1e6e88c2be64
+    :git: https://github.com/MengTo/Spring.git
+
+SPEC CHECKSUMS:
+  EZSwiftExtensions: 172160bfb3635161c8b833d9111961ff3e6f517d
+  Realm: 3601ef091c8c499a31101d8563b991e75546cdce
+  RealmSwift: 8183818515471b01a99abdd2970f8e4fd52b6f4a
+  SCLAlertView: 8a14ffc40590c619e183eed2298b854385f30be1
+  Spring: 3f02b5dc3308572ef177b3cad0fa7bbc4b0706f7
+  SVColorPicker: a19ab1b62ffc6cd446819908432c70f63c511171
+
+PODFILE CHECKSUM: a2db76bdaf9d1826efae497e9f14d208e81e0b71
+
+COCOAPODS: 1.2.1
