@@ -11,6 +11,7 @@ import UIKit
 class STPSoldierCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var soldierAgeLabel: UILabel!
+    @IBOutlet weak var soldierGenderLabel: UILabel!
     @IBOutlet weak var soldierImageView: UIImageView!
     @IBOutlet weak var soldierNameLabel: UILabel!
     
@@ -20,6 +21,8 @@ class STPSoldierCollectionViewCell: UICollectionViewCell {
         
         self.soldierAgeLabel.font = Constants.kApplicationTitleFont
         self.soldierAgeLabel.textColor = UIColor.darkGray
+        
+        self.soldierGenderLabel.font = Constants.kApplicationStandardFont
         
         self.soldierNameLabel.font = Constants.kApplicationStandardFont
         self.soldierNameLabel.textColor = Constants.kApplicationDarkerTextColor

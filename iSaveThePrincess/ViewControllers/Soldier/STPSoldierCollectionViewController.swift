@@ -125,6 +125,8 @@ extension STPSoldierCollectionViewController: UICollectionViewDataSource {
         let soldier = STPSoldier(managedObject: STPRealmHelper.shared.storedSoldiers[indexPath.row])
 
         cell.soldierAgeLabel.text = "\(soldier.age)"
+        cell.soldierGenderLabel.text = soldier.gender.associatedSymbolString
+        cell.soldierGenderLabel.textColor = soldier.gender.associatedSymbolColor
         cell.soldierImageView.image = soldier.gender.associatedSpriteImage
             .tinted(color: UIColor(hexString: soldier.color)!)
         cell.soldierNameLabel.text = soldier.name

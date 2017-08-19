@@ -26,6 +26,16 @@ enum STPSoldierGenderEnum: Int {
         }
     }
     
+    // The associated symbol string
+    var associatedSymbolString: String {
+        return Constants.kSoldierAssociatedSymbols[self.rawValue]
+    }
+    
+    // The associated symbol color
+    var associatedSymbolColor: UIColor {
+        return Constants.kSoldierAssociatedSymbolsColors[self.rawValue]
+    }
+    
     // The name (male, female or other)
     var name: String {
         return Constants.kSoldierTypeNames[self.rawValue]

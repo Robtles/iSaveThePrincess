@@ -52,7 +52,7 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="90" height="158"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g49-JT-nq0">
-                                                            <rect key="frame" x="4" y="16" width="82" height="21"/>
+                                                            <rect key="frame" x="24" y="16" width="42" height="21"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
@@ -74,15 +74,20 @@
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                     <constraints>
                                                         <constraint firstItem="Ng0-CT-XxR" firstAttribute="centerX" secondItem="Pme-K8-fgg" secondAttribute="centerX" id="5lj-Bg-nWP"/>
-                                                        <constraint firstAttribute="trailing" secondItem="g49-JT-nq0" secondAttribute="trailing" constant="4" id="6Xi-mL-QTe"/>
+                                                        <constraint firstItem="g49-JT-nq0" firstAttribute="centerX" secondItem="Pme-K8-fgg" secondAttribute="centerX" id="8BH-Z5-bKc"/>
                                                         <constraint firstItem="Ng0-CT-XxR" firstAttribute="top" secondItem="g49-JT-nq0" secondAttribute="bottom" constant="8" id="RsS-qo-b90"/>
                                                         <constraint firstItem="g49-JT-nq0" firstAttribute="top" secondItem="Pme-K8-fgg" secondAttribute="top" constant="16" id="X1K-ut-Fdu"/>
                                                         <constraint firstAttribute="trailing" secondItem="LpF-s3-Hpv" secondAttribute="trailing" constant="4" id="XTp-1T-32m"/>
                                                         <constraint firstItem="LpF-s3-Hpv" firstAttribute="top" secondItem="Ng0-CT-XxR" secondAttribute="bottom" constant="8" id="dpM-dC-FbT"/>
-                                                        <constraint firstItem="g49-JT-nq0" firstAttribute="leading" secondItem="Pme-K8-fgg" secondAttribute="leading" constant="4" id="sq9-EC-jxq"/>
                                                         <constraint firstItem="LpF-s3-Hpv" firstAttribute="leading" secondItem="Pme-K8-fgg" secondAttribute="leading" constant="4" id="z2K-wc-GaV"/>
                                                     </constraints>
                                                 </view>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3e1-iY-a7v">
+                                                    <rect key="frame" x="70" y="16" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                         </view>
                                         <constraints>
@@ -90,9 +95,12 @@
                                             <constraint firstAttribute="trailing" secondItem="Pme-K8-fgg" secondAttribute="trailing" id="3Oh-PO-oli"/>
                                             <constraint firstAttribute="bottom" secondItem="Pme-K8-fgg" secondAttribute="bottom" id="OuK-EM-mDK"/>
                                             <constraint firstItem="Pme-K8-fgg" firstAttribute="leading" secondItem="Fs5-Iv-C3f" secondAttribute="leading" id="ReW-23-p4M"/>
+                                            <constraint firstItem="3e1-iY-a7v" firstAttribute="leading" secondItem="g49-JT-nq0" secondAttribute="trailing" constant="4" id="acd-gC-yHb"/>
+                                            <constraint firstItem="3e1-iY-a7v" firstAttribute="bottom" secondItem="g49-JT-nq0" secondAttribute="bottom" id="cZZ-gP-iow"/>
                                         </constraints>
                                         <connections>
                                             <outlet property="soldierAgeLabel" destination="g49-JT-nq0" id="GQw-Ob-SlD"/>
+                                            <outlet property="soldierGenderLabel" destination="3e1-iY-a7v" id="Mog-pP-ZwZ"/>
                                             <outlet property="soldierImageView" destination="Ng0-CT-XxR" id="h0F-lw-wtO"/>
                                             <outlet property="soldierNameLabel" destination="LpF-s3-Hpv" id="kfd-nR-IEK"/>
                                         </connections>

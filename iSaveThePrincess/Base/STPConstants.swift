@@ -88,6 +88,11 @@ struct Constants {
                                     "Female",
                                     "Other"]
     
+    // Soldier gender associated symbols
+    static let kSoldierAssociatedSymbols = ["♂",
+                                            "♀",
+                                            "?"]
+    
     /**********
      * COLORS
      **********/
@@ -101,6 +106,11 @@ struct Constants {
     // Application darker blue gradient
     static let kApplicationDarkerBlueGradientColors: [CGColor] = [UIColor.blue.cgColor,
                                                                   UIColor.black.cgColor]
+    
+    // Soldier gender associated symbols colors
+    static let kSoldierAssociatedSymbolsColors: [UIColor] = [UIColor.blue,
+                                                             UIColor(hexString: "FF69B4")!, // Pink
+                                                             UIColor.darkGray]
     
     /**********
      * FONTS
