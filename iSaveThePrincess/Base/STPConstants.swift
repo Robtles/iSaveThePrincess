@@ -36,13 +36,19 @@ struct Constants {
     static let kErrorString = "Error"
     
     // Delete this soldier String
-    static let kDeleteThisSoldierString = "Delete this soldier?"
+    static let kDeleteThisSoldierString = "Delete this soldier"
+    
+    // What to do with this soldier String
+    static let kWhatToDoWithSoldier = "What do you want to do with this soldier?"
     
     // Confirm String
     static let kConfirmString = "Confirm"
     
     // No String
     static let kNoString = "No"
+    
+    // Back String
+    static let kNBackString = "Back"
     
     // Soldier Name String
     static let kSoldierNameString = "Soldier name"

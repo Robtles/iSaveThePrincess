@@ -24,7 +24,6 @@ class STPAddOrUpdateSoldierModalViewController: STPOverlayedModalViewController 
     @IBOutlet weak var soldierAgeLabel: UILabel!
     @IBOutlet weak var soldierAgeContainerView: UIView!
     @IBOutlet weak var updateOrAddButton: UIButton!
-    @IBOutlet weak var trashImageView: UIImageView!
     
     var soldierColorPicker: ColorPickerView!
     var soldierAgePickerView: AKPickerView!
@@ -43,9 +42,6 @@ class STPAddOrUpdateSoldierModalViewController: STPOverlayedModalViewController 
     // MARK: - Appplication lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        self.trashImageView.isHidden = !self.isUpdatingSoldier
-        self.trashImageView.addTapGesture(target: self, action: #selector(trashTapped))
         
         self.soldierImageView.image = self.currentSoldier.gender.associatedSpriteImage
             .tinted(color: UIColor(hexString: self.currentSoldier.color)!)
@@ -190,36 +186,6 @@ class STPAddOrUpdateSoldierModalViewController: STPOverlayedModalViewController 
         } else {
             Utils.showErrorAlert(withMessage: Constants.kCouldNotSaveSoldierString)
         }
-    }
-    
-    @objc private func trashTapped() {
-        
-        let appearance: SCLAlertView.SCLAppearance = SCLAlertView.SCLAppearance(kDefaultShadowOpacity: 0.5,
-                                                                                kTitleFont: Constants.kApplicationTitleFont,
-                                                                                kTextFont: Constants.kApplicationStandardFont,
-                                                                                kButtonFont: Constants.kApplicationButtonFont,
-                                                                                hideWhenBackgroundViewIsTapped: true)
-        let alert = SCLAlertView(appearance: appearance)
-        
-        alert.addButton(Constants.kDeleteString,
-                        backgroundColor: Constants.kApplicationBlueTintColor,
-                        textColor: UIColor.white) {
-                            
-                            if STPRealmHelper.shared.removeSoldier(self.currentSoldier.index) {
-                                
-                                self.delegate?.didUpdateSoldiersList()
-                                self.dismiss(animated: true, completion: nil)
-                            } else {
-                                
-                                Utils.showErrorAlert(withMessage: Constants.kErrorString,
-                                                     title: Constants.kCouldNotDeleteSoldierString)
-                            }
-        }
-        
-        alert.showInfo(Constants.kConfirmString,
-                       subTitle: Constants.kDeleteThisSoldierString,
-                       closeButtonTitle: Constants.kNoString,
-                       colorStyle: 0x07BDF7)
     }
 }
 

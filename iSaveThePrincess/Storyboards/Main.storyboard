@@ -238,18 +238,10 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="trash" translatesAutoresizingMaskIntoConstraints="NO" id="LFc-Mg-bBx">
-                                        <rect key="frame" x="305" y="16" width="30" height="30"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="30" id="MdQ-ug-hPT"/>
-                                            <constraint firstAttribute="height" constant="30" id="gXB-wR-jau"/>
-                                        </constraints>
-                                    </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="fOD-6b-qe7" secondAttribute="bottom" constant="16" id="0UX-Qk-hpF"/>
-                                    <constraint firstAttribute="trailing" secondItem="LFc-Mg-bBx" secondAttribute="trailing" constant="8" id="13I-Fg-I05"/>
                                     <constraint firstItem="BWy-18-qAG" firstAttribute="leading" secondItem="zYq-cx-wn3" secondAttribute="leading" id="7CL-Lk-GRf"/>
                                     <constraint firstItem="0It-2b-MDH" firstAttribute="leading" secondItem="4D7-TC-s6Y" secondAttribute="leading" constant="32" id="9VM-xA-KoZ"/>
                                     <constraint firstItem="uVS-g0-7iq" firstAttribute="centerX" secondItem="4D7-TC-s6Y" secondAttribute="centerX" id="EWY-rl-zbl"/>
@@ -263,7 +255,6 @@
                                     <constraint firstItem="PPn-Le-ilF" firstAttribute="top" secondItem="LcV-za-y6T" secondAttribute="bottom" constant="8" id="P9z-qT-kLh"/>
                                     <constraint firstAttribute="trailing" secondItem="0It-2b-MDH" secondAttribute="trailing" constant="32" id="Rwq-GR-ahR"/>
                                     <constraint firstItem="BWy-18-qAG" firstAttribute="top" secondItem="zYq-cx-wn3" secondAttribute="bottom" id="UUI-2t-MrL"/>
-                                    <constraint firstItem="LFc-Mg-bBx" firstAttribute="top" secondItem="uVS-g0-7iq" secondAttribute="top" id="Vck-1h-61g"/>
                                     <constraint firstItem="PPn-Le-ilF" firstAttribute="leading" secondItem="b8K-YY-QW7" secondAttribute="leading" id="dQh-XF-K36"/>
                                     <constraint firstAttribute="trailing" secondItem="b8K-YY-QW7" secondAttribute="trailing" constant="32" id="eI8-oJ-Cr6"/>
                                     <constraint firstItem="LcV-za-y6T" firstAttribute="top" secondItem="b8K-YY-QW7" secondAttribute="bottom" constant="16" id="hEa-9Y-RdA"/>
@@ -312,7 +303,6 @@
                         <outlet property="soldierGenderSegmentedControl" destination="b8K-YY-QW7" id="FCv-sV-NYN"/>
                         <outlet property="soldierImageView" destination="uVS-g0-7iq" id="Tw4-ia-i03"/>
                         <outlet property="soldierNameTextField" destination="zYq-cx-wn3" id="BsV-8l-LWa"/>
-                        <outlet property="trashImageView" destination="LFc-Mg-bBx" id="96W-B0-yXn"/>
                         <outlet property="updateOrAddButton" destination="fOD-6b-qe7" id="mIc-ra-qcp"/>
                     </connections>
                 </viewController>
@@ -349,7 +339,4 @@
             <point key="canvasLocation" x="80.799999999999997" y="182.15892053973016"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="trash" width="80" height="80"/>
-    </resources>
 </document>

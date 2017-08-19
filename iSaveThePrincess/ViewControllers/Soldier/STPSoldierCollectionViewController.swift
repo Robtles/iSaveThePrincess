@@ -47,18 +47,62 @@ class STPSoldierCollectionViewController: UIViewController {
         
         
     }
+    
+    fileprivate func showAlertWith(_ soldier: STPSoldier) {
+        
+        let appearance: SCLAlertView.SCLAppearance = SCLAlertView.SCLAppearance(kDefaultShadowOpacity: 0.5,
+                                                                                kTitleFont: Constants.kApplicationTitleFont,
+                                                                                kTextFont: Constants.kApplicationStandardFont,
+                                                                                kButtonFont: Constants.kApplicationButtonFont,
+                                                                                hideWhenBackgroundViewIsTapped: true)
+        let alert = SCLAlertView(appearance: appearance)
+
+        alert.addButton(Constants.kAttackTheDoorString,
+                        backgroundColor: Constants.kApplicationBlueTintColor,
+                        textColor: UIColor.white) {
+                            
+                            
+        }
+        
+        alert.addButton(Constants.kUpdateString,
+                        backgroundColor: Constants.kApplicationBlueTintColor,
+                        textColor: UIColor.white) {
+                            
+                            STPAddOrUpdateSoldierModalViewController.presentIn(self,
+                                                                               delegate: self,
+                                                                               updatingSoldier: soldier)
+        }
+        
+        alert.addButton(Constants.kDeleteString,
+                        backgroundColor: Constants.kApplicationBlueTintColor,
+                        textColor: UIColor.white) {
+                            
+                            if STPRealmHelper.shared.removeSoldier(soldier.index) {
+                                
+                                DispatchQueue.main.async {
+                                    self.soldiersCollectionView.reloadData()
+                                }
+                            } else {
+                                
+                                Utils.showErrorAlert(withMessage: Constants.kErrorString,
+                                                     title: Constants.kCouldNotDeleteSoldierString)
+                            }
+        }
+        
+        alert.showInfo(soldier.name,
+                       subTitle: Constants.kWhatToDoWithSoldier,
+                       closeButtonTitle: Constants.kNBackString,
+                       colorStyle: 0x07BDF7)
+    }
 }
 
 // MARK: - Collection View Delegate
 extension STPSoldierCollectionViewController: UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
+    
         let soldier = STPSoldier(managedObject: STPRealmHelper.shared.storedSoldiers[indexPath.row])
-        
-        STPAddOrUpdateSoldierModalViewController.presentIn(self,
-                                                           delegate: self,
-                                                           updatingSoldier: soldier)
+        self.showAlertWith(soldier)
     }
 }
 
