@@ -20,6 +20,13 @@ struct Constants {
     static let kSoldierAges: [Int] = Array(10...40)
     
     /**********
+     * SEGUES
+     **********/
+    
+    // To Battle Screen Segue
+    static let kToBattleScreenSegue = "toBattleScreenSegue"
+    
+    /**********
      * STRINGS
      **********/
     
@@ -71,9 +78,6 @@ struct Constants {
     // Delete String
     static let kDeleteString = "Delete"
     
-    // No soldier error String
-    static let kNoSoldierErrorMessageString = "You need to add at least one soldier to be able to attack the door!"
-    
     // Could not save soldier String
     static let kCouldNotSaveSoldierString = "Could not save soldier. Please try again."
     
@@ -88,6 +92,9 @@ struct Constants {
     
     // No soldiers label String
     static let kNoSoldiersLabelString = "No soldier added yet."
+    
+    // Get ready String
+    static let kGetReadyString = "Get Ready!"
     
     // Soldier type names
     static let kSoldierTypeNames = ["Male",

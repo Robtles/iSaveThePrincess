@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D45A5EA01F48DB0B0085D45E /* STPGetReadyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45A5E9F1F48DB0B0085D45E /* STPGetReadyView.swift */; };
 		D4659DB31F484A8F007BF071 /* STPOverlayedModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4659DB21F484A8F007BF071 /* STPOverlayedModalViewController.swift */; };
 		D4659DB71F484C28007BF071 /* STPAddOrUpdateSoldierModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4659DB61F484C28007BF071 /* STPAddOrUpdateSoldierModalViewController.swift */; };
 		D4659DBB1F487113007BF071 /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4659DBA1F487113007BF071 /* UIButton+Extension.swift */; };
@@ -34,6 +35,7 @@
 		73F64B2EF26F16568EC34E27 /* Pods-iSaveThePrincess.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iSaveThePrincess.release.xcconfig"; path = "Pods/Target Support Files/Pods-iSaveThePrincess/Pods-iSaveThePrincess.release.xcconfig"; sourceTree = "<group>"; };
 		C8922BDC9FEB38B24DDBF4AB /* Pods_iSaveThePrincess.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iSaveThePrincess.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4346F0A1F47442E00A4099F /* iSaveThePrincess.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iSaveThePrincess.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D45A5E9F1F48DB0B0085D45E /* STPGetReadyView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = STPGetReadyView.swift; path = Views/STPGetReadyView.swift; sourceTree = "<group>"; };
 		D4659DB21F484A8F007BF071 /* STPOverlayedModalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = STPOverlayedModalViewController.swift; path = ViewControllers/Base/STPOverlayedModalViewController.swift; sourceTree = "<group>"; };
 		D4659DB61F484C28007BF071 /* STPAddOrUpdateSoldierModalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = STPAddOrUpdateSoldierModalViewController.swift; path = ViewControllers/Soldier/STPAddOrUpdateSoldierModalViewController.swift; sourceTree = "<group>"; };
 		D4659DBA1F487113007BF071 /* UIButton+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIButton+Extension.swift"; path = "Supporting Files/Extensions/UIButton+Extension.swift"; sourceTree = "<group>"; };
@@ -147,6 +149,7 @@
 			isa = PBXGroup;
 			children = (
 				D4659DC61F48A765007BF071 /* Cells */,
+				D45A5E9F1F48DB0B0085D45E /* STPGetReadyView.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -398,6 +401,7 @@
 				D4659DBF1F488B99007BF071 /* UIColor+Extension.swift in Sources */,
 				D4659DB31F484A8F007BF071 /* STPOverlayedModalViewController.swift in Sources */,
 				D4B9F4321F47A6D300579235 /* STPSoldier.swift in Sources */,
+				D45A5EA01F48DB0B0085D45E /* STPGetReadyView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

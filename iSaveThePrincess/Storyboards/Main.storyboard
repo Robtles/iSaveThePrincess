@@ -12,7 +12,7 @@
         <!--Soldier Collection View Controller-->
         <scene sceneID="wRG-dy-E75">
             <objects>
-                <viewController id="AuJ-gq-lSZ" customClass="STPSoldierCollectionViewController" customModule="iSaveThePrincess" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="AuJ-gq-lSZ" customClass="STPSoldierCollectionViewController" customModule="iSaveThePrincess" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="4hF-sh-fQg"/>
                         <viewControllerLayoutGuide type="bottom" id="e1K-Eo-hsC"/>
@@ -21,20 +21,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gnx-aB-7Fl">
-                                <rect key="frame" x="8" y="615" width="359" height="44"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="gM9-uZ-ctl"/>
-                                </constraints>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <action selector="attackTheDoorButtonTapped:" destination="AuJ-gq-lSZ" eventType="touchUpInside" id="QOx-8U-AjF"/>
-                                </connections>
-                            </button>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="I2H-Aa-vL9">
-                                <rect key="frame" x="8" y="64" width="359" height="543"/>
+                                <rect key="frame" x="8" y="64" width="359" height="603"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="5w0-oz-0C1">
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="5w0-oz-0C1">
                                     <size key="itemSize" width="90" height="158"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -111,16 +101,36 @@
                                     <outlet property="delegate" destination="AuJ-gq-lSZ" id="DvN-Bs-UQA"/>
                                 </connections>
                             </collectionView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kih-4G-Ynq" customClass="STPGetReadyView" customModule="iSaveThePrincess" customModuleProvider="target">
+                                <rect key="frame" x="142" y="299" width="90" height="69"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bla-Kt-iHa">
+                                        <rect key="frame" x="24" y="24" width="42" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="bla-Kt-iHa" secondAttribute="bottom" constant="24" id="CyO-80-1qu"/>
+                                    <constraint firstItem="bla-Kt-iHa" firstAttribute="top" secondItem="Kih-4G-Ynq" secondAttribute="top" constant="24" id="Sl4-mj-Bnn"/>
+                                    <constraint firstAttribute="trailing" secondItem="bla-Kt-iHa" secondAttribute="trailing" constant="24" id="gXr-ZO-0E1"/>
+                                    <constraint firstItem="bla-Kt-iHa" firstAttribute="leading" secondItem="Kih-4G-Ynq" secondAttribute="leading" constant="24" id="wtS-xH-1CO"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="getReadyLabel" destination="bla-Kt-iHa" id="9Dj-RZ-mB4"/>
+                                </connections>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="I2H-Aa-vL9" secondAttribute="trailing" constant="8" id="FNa-kx-F6H"/>
                             <constraint firstItem="I2H-Aa-vL9" firstAttribute="leading" secondItem="GDe-hw-e84" secondAttribute="leading" constant="8" id="Fc9-7V-QKq"/>
+                            <constraint firstItem="e1K-Eo-hsC" firstAttribute="top" secondItem="I2H-Aa-vL9" secondAttribute="bottom" id="RIe-Uk-aB4"/>
                             <constraint firstItem="I2H-Aa-vL9" firstAttribute="top" secondItem="4hF-sh-fQg" secondAttribute="bottom" id="Rl6-3g-Vo9"/>
-                            <constraint firstItem="gnx-aB-7Fl" firstAttribute="leading" secondItem="GDe-hw-e84" secondAttribute="leading" constant="8" id="UY5-Lq-iEx"/>
-                            <constraint firstAttribute="trailing" secondItem="gnx-aB-7Fl" secondAttribute="trailing" constant="8" id="exg-W6-vlH"/>
-                            <constraint firstItem="gnx-aB-7Fl" firstAttribute="top" secondItem="I2H-Aa-vL9" secondAttribute="bottom" constant="8" id="fOH-bw-eVa"/>
-                            <constraint firstItem="e1K-Eo-hsC" firstAttribute="top" secondItem="gnx-aB-7Fl" secondAttribute="bottom" constant="8" id="y5G-lD-696"/>
+                            <constraint firstItem="Kih-4G-Ynq" firstAttribute="centerY" secondItem="GDe-hw-e84" secondAttribute="centerY" id="nWL-eG-QMy"/>
+                            <constraint firstItem="Kih-4G-Ynq" firstAttribute="centerX" secondItem="GDe-hw-e84" secondAttribute="centerX" id="r6r-aj-PXW"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="k5w-Fb-hzK">
@@ -131,14 +141,32 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="attackDoorButton" destination="gnx-aB-7Fl" id="bVj-uB-fMs"/>
                         <outlet property="barButtonItem" destination="jjv-th-b6j" id="bWF-KC-GA8"/>
+                        <outlet property="getReadyView" destination="Kih-4G-Ynq" id="bcY-ip-VIi"/>
                         <outlet property="soldiersCollectionView" destination="I2H-Aa-vL9" id="Wk6-se-mIq"/>
+                        <segue destination="u4a-Bw-9gG" kind="presentation" identifier="toBattleScreenSegue" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="3uC-FZ-Z9f"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qJ0-Ii-YOe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1020" y="182.15892053973016"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="hMa-TX-e5w">
+            <objects>
+                <viewController id="u4a-Bw-9gG" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="0Je-KI-D2t"/>
+                        <viewControllerLayoutGuide type="bottom" id="Fma-cb-bzo"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="LQd-J7-6Bt">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Abg-nB-4Z7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2012" y="510"/>
         </scene>
         <!--Add Or Update Soldier Modal View Controller-->
         <scene sceneID="Bru-8m-6Ae">

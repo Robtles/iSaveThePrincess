@@ -12,8 +12,8 @@ import SCLAlertView
 class STPSoldierCollectionViewController: UIViewController {
     
     @IBOutlet weak var soldiersCollectionView: UICollectionView!
-    @IBOutlet weak var attackDoorButton: UIButton!
     @IBOutlet weak var barButtonItem: UIBarButtonItem!
+    @IBOutlet weak var getReadyView: STPGetReadyView!
     
     // MARK: - Application lifecycle
     override func viewDidLoad() {
@@ -26,26 +26,16 @@ class STPSoldierCollectionViewController: UIViewController {
         gradient.colors = Constants.kApplicationDarkerBlueGradientColors
         self.view.layer.insertSublayer(gradient, at: 0)
         
-        self.attackDoorButton.createSTPBlueButton(withTitle: Constants.kAttackTheDoorString)
-        
         self.barButtonItem.title = Constants.kAddString
         self.barButtonItem.setTitleTextAttributes([NSForegroundColorAttributeName: UIColor.white], for: .normal)
+        
+        self.getReadyView.isHidden = true
+        self.getReadyView.alpha = 0.0
     }
     
     // MARK: - Actions
     @IBAction func addButtonTapped(_ sender: Any) {
         STPAddOrUpdateSoldierModalViewController.presentIn(self, delegate: self)
-    }
-    
-    @IBAction func attackTheDoorButtonTapped(_ sender: Any) {
-        
-        guard STPRealmHelper.shared.storedSoldiers.count > 0 else {
-            
-            Utils.showErrorAlert(withMessage: Constants.kNoSoldierErrorMessageString)
-            return
-        }
-        
-        
     }
     
     fileprivate func showAlertWith(_ soldier: STPSoldier) {
@@ -61,7 +51,7 @@ class STPSoldierCollectionViewController: UIViewController {
                         backgroundColor: Constants.kApplicationBlueTintColor,
                         textColor: UIColor.white) {
                             
-                            
+                            self.prepareFight(withSoldier: soldier)
         }
         
         alert.addButton(Constants.kUpdateString,
@@ -94,6 +84,19 @@ class STPSoldierCollectionViewController: UIViewController {
                        closeButtonTitle: Constants.kNBackString,
                        colorStyle: 0x07BDF7)
     }
+    
+    private func prepareFight(withSoldier soldier: STPSoldier) {
+        
+        self.getReadyView.isHidden = false
+        
+        UIView.animate(withDuration: 2.0, animations: {
+            self.getReadyView.alpha = 1.0
+        }) { result in
+            self.getReadyView.alpha = 0.0
+            self.getReadyView.isHidden = true
+            self.performSegue(withIdentifier: Constants.kToBattleScreenSegue, sender: self)
+        }
+    }
 }
 
 // MARK: - Collection View Delegate
@@ -120,20 +123,24 @@ extension STPSoldierCollectionViewController: UICollectionViewDelegateFlowLayout
                         layout collectionViewLayout: UICollectionViewLayout,
                         minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         
-        return 0.0
+        return CGFloat.leastNormalMagnitude
     }
     
     func collectionView(_ collectionView: UICollectionView,
                         layout collectionViewLayout: UICollectionViewLayout,
                         minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
         
-        return 0.0
+        return CGFloat.leastNormalMagnitude
     }
     
     func collectionView(_ collectionView: UICollectionView,
                         layout collectionViewLayout: UICollectionViewLayout,
                         insetForSectionAt section: Int) -> UIEdgeInsets {
-        return UIEdgeInsetsMake(0.0, 0.0, 0.0, 0.0)
+        
+        return UIEdgeInsetsMake(CGFloat.leastNormalMagnitude,
+                                CGFloat.leastNormalMagnitude,
+                                CGFloat.leastNormalMagnitude,
+                                CGFloat.leastNormalMagnitude)
     }
 }
 
