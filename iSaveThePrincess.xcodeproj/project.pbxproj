@@ -16,6 +16,8 @@
 		D4B9F4301F47A6C200579235 /* STPSoldier+Persistable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B9F42F1F47A6C200579235 /* STPSoldier+Persistable.swift */; };
 		D4B9F4321F47A6D300579235 /* STPSoldier.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B9F4311F47A6D300579235 /* STPSoldier.swift */; };
 		D4B9F4341F47A92800579235 /* STPConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B9F4331F47A92800579235 /* STPConstants.swift */; };
+		D4B9F43D1F47B1EE00579235 /* STPSoldierCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B9F43C1F47B1EE00579235 /* STPSoldierCollectionViewController.swift */; };
+		D4B9F4401F47B26100579235 /* STPBaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B9F43F1F47B26100579235 /* STPBaseNavigationController.swift */; };
 		EE1DC0A98C6DE0A815594F7A /* Pods_iSaveThePrincess.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8922BDC9FEB38B24DDBF4AB /* Pods_iSaveThePrincess.framework */; };
 /* End PBXBuildFile section */
 
@@ -34,6 +36,8 @@
 		D4B9F42F1F47A6C200579235 /* STPSoldier+Persistable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "STPSoldier+Persistable.swift"; path = "Model/Persistable/STPSoldier+Persistable.swift"; sourceTree = "<group>"; };
 		D4B9F4311F47A6D300579235 /* STPSoldier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = STPSoldier.swift; path = Model/Schema/STPSoldier.swift; sourceTree = "<group>"; };
 		D4B9F4331F47A92800579235 /* STPConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = STPConstants.swift; path = Base/STPConstants.swift; sourceTree = "<group>"; };
+		D4B9F43C1F47B1EE00579235 /* STPSoldierCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = STPSoldierCollectionViewController.swift; path = ViewControllers/Soldier/STPSoldierCollectionViewController.swift; sourceTree = "<group>"; };
+		D4B9F43F1F47B26100579235 /* STPBaseNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = STPBaseNavigationController.swift; path = ViewControllers/Base/STPBaseNavigationController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +90,7 @@
 		D4346F0C1F47442E00A4099F /* iSaveThePrincess */ = {
 			isa = PBXGroup;
 			children = (
+				D4B9F4351F47B01300579235 /* ViewControllers */,
 				D4B9F4241F47A59E00579235 /* Object Store */,
 				D4B9F4231F47A55C00579235 /* Model */,
 				D4B9F4161F4795B500579235 /* Storyboards */,
@@ -162,6 +167,31 @@
 				D4B9F4311F47A6D300579235 /* STPSoldier.swift */,
 			);
 			name = Schema;
+			sourceTree = "<group>";
+		};
+		D4B9F4351F47B01300579235 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				D4B9F43E1F47B24C00579235 /* Base */,
+				D4B9F4361F47B05000579235 /* Soldier */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		D4B9F4361F47B05000579235 /* Soldier */ = {
+			isa = PBXGroup;
+			children = (
+				D4B9F43C1F47B1EE00579235 /* STPSoldierCollectionViewController.swift */,
+			);
+			name = Soldier;
+			sourceTree = "<group>";
+		};
+		D4B9F43E1F47B24C00579235 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				D4B9F43F1F47B26100579235 /* STPBaseNavigationController.swift */,
+			);
+			name = Base;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -293,6 +323,8 @@
 				D4B9F42C1F47A67800579235 /* STPRealmHelper.swift in Sources */,
 				D4B9F4341F47A92800579235 /* STPConstants.swift in Sources */,
 				D4B9F41A1F4795E400579235 /* STPAppDelegate.swift in Sources */,
+				D4B9F43D1F47B1EE00579235 /* STPSoldierCollectionViewController.swift in Sources */,
+				D4B9F4401F47B26100579235 /* STPBaseNavigationController.swift in Sources */,
 				D4B9F4321F47A6D300579235 /* STPSoldier.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

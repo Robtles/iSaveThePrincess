@@ -30,5 +30,4 @@ extension STPSoldier: STPPersistable {
         
         return managedSoldier
     }
-
 }
