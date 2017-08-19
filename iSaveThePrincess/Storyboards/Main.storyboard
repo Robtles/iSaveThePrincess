@@ -27,8 +27,11 @@
                                     <constraint firstAttribute="height" constant="44" id="gM9-uZ-ctl"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="attackTheDoorButtonTapped:" destination="AuJ-gq-lSZ" eventType="touchUpInside" id="QOx-8U-AjF"/>
+                                </connections>
                             </button>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="I2H-Aa-vL9">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="I2H-Aa-vL9">
                                 <rect key="frame" x="8" y="64" width="359" height="543"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="5w0-oz-0C1">
@@ -47,6 +50,10 @@
                                         </view>
                                     </collectionViewCell>
                                 </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="AuJ-gq-lSZ" id="wUh-es-va7"/>
+                                    <outlet property="delegate" destination="AuJ-gq-lSZ" id="DvN-Bs-UQA"/>
+                                </connections>
                             </collectionView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -60,9 +67,16 @@
                             <constraint firstItem="e1K-Eo-hsC" firstAttribute="top" secondItem="gnx-aB-7Fl" secondAttribute="bottom" constant="8" id="y5G-lD-696"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="k5w-Fb-hzK"/>
+                    <navigationItem key="navigationItem" id="k5w-Fb-hzK">
+                        <barButtonItem key="rightBarButtonItem" id="jjv-th-b6j">
+                            <connections>
+                                <action selector="addButtonTapped:" destination="AuJ-gq-lSZ" id="Cux-rY-EVz"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="attackDoorButton" destination="gnx-aB-7Fl" id="bVj-uB-fMs"/>
+                        <outlet property="barButtonItem" destination="jjv-th-b6j" id="bWF-KC-GA8"/>
                         <outlet property="soldiersCollectionView" destination="I2H-Aa-vL9" id="Wk6-se-mIq"/>
                     </connections>
                 </viewController>
@@ -73,7 +87,6 @@
         <!--Base Navigation Controller-->
         <scene sceneID="aIn-cS-kAF">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="H1Y-0B-X0T" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Jnf-57-gf2" customClass="STPBaseNavigationController" customModule="iSaveThePrincess" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="cjB-bp-sZI">
@@ -85,6 +98,7 @@
                         <segue destination="AuJ-gq-lSZ" kind="relationship" relationship="rootViewController" id="lp3-Wy-FYL"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="H1Y-0B-X0T" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="80.799999999999997" y="182.15892053973016"/>
         </scene>
