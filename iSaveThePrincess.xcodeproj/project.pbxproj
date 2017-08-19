@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D4659DB31F484A8F007BF071 /* STPOverlayedModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4659DB21F484A8F007BF071 /* STPOverlayedModalViewController.swift */; };
+		D4659DB71F484C28007BF071 /* STPAddOrUpdateSoldierModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4659DB61F484C28007BF071 /* STPAddOrUpdateSoldierModalViewController.swift */; };
+		D4659DBB1F487113007BF071 /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4659DBA1F487113007BF071 /* UIButton+Extension.swift */; };
+		D4659DBD1F48753E007BF071 /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4659DBC1F48753E007BF071 /* UIImage+Extension.swift */; };
+		D4659DBF1F488B99007BF071 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4659DBE1F488B99007BF071 /* UIColor+Extension.swift */; };
+		D4659DC11F4892F3007BF071 /* STPUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4659DC01F4892F3007BF071 /* STPUtils.swift */; };
+		D4659DC41F4896D0007BF071 /* STPAddOrUpdateSoldierDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4659DC31F4896D0007BF071 /* STPAddOrUpdateSoldierDelegate.swift */; };
+		D4659DC81F48A786007BF071 /* STPSoldierCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4659DC71F48A786007BF071 /* STPSoldierCollectionViewCell.swift */; };
 		D4B9F41A1F4795E400579235 /* STPAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B9F4181F4795E400579235 /* STPAppDelegate.swift */; };
 		D4B9F41C1F47961D00579235 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4B9F41B1F47961D00579235 /* Assets.xcassets */; };
 		D4B9F41F1F47962500579235 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4B9F41D1F47962500579235 /* LaunchScreen.storyboard */; };
@@ -26,6 +34,14 @@
 		73F64B2EF26F16568EC34E27 /* Pods-iSaveThePrincess.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iSaveThePrincess.release.xcconfig"; path = "Pods/Target Support Files/Pods-iSaveThePrincess/Pods-iSaveThePrincess.release.xcconfig"; sourceTree = "<group>"; };
 		C8922BDC9FEB38B24DDBF4AB /* Pods_iSaveThePrincess.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iSaveThePrincess.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4346F0A1F47442E00A4099F /* iSaveThePrincess.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iSaveThePrincess.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D4659DB21F484A8F007BF071 /* STPOverlayedModalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = STPOverlayedModalViewController.swift; path = ViewControllers/Base/STPOverlayedModalViewController.swift; sourceTree = "<group>"; };
+		D4659DB61F484C28007BF071 /* STPAddOrUpdateSoldierModalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = STPAddOrUpdateSoldierModalViewController.swift; path = ViewControllers/Soldier/STPAddOrUpdateSoldierModalViewController.swift; sourceTree = "<group>"; };
+		D4659DBA1F487113007BF071 /* UIButton+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIButton+Extension.swift"; path = "Supporting Files/Extensions/UIButton+Extension.swift"; sourceTree = "<group>"; };
+		D4659DBC1F48753E007BF071 /* UIImage+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIImage+Extension.swift"; path = "Supporting Files/Extensions/UIImage+Extension.swift"; sourceTree = "<group>"; };
+		D4659DBE1F488B99007BF071 /* UIColor+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIColor+Extension.swift"; path = "Supporting Files/Extensions/UIColor+Extension.swift"; sourceTree = "<group>"; };
+		D4659DC01F4892F3007BF071 /* STPUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = STPUtils.swift; path = Base/STPUtils.swift; sourceTree = "<group>"; };
+		D4659DC31F4896D0007BF071 /* STPAddOrUpdateSoldierDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = STPAddOrUpdateSoldierDelegate.swift; sourceTree = "<group>"; };
+		D4659DC71F48A786007BF071 /* STPSoldierCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = STPSoldierCollectionViewCell.swift; path = Views/Cells/STPSoldierCollectionViewCell.swift; sourceTree = "<group>"; };
 		D4B9F4171F4795E400579235 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Base/Info.plist; sourceTree = "<group>"; };
 		D4B9F4181F4795E400579235 /* STPAppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = STPAppDelegate.swift; path = Base/STPAppDelegate.swift; sourceTree = "<group>"; };
 		D4B9F41B1F47961D00579235 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = Base/Assets.xcassets; sourceTree = "<group>"; };
@@ -90,6 +106,8 @@
 		D4346F0C1F47442E00A4099F /* iSaveThePrincess */ = {
 			isa = PBXGroup;
 			children = (
+				D4659DC51F48A75F007BF071 /* Views */,
+				D4659DB81F4870E3007BF071 /* Supporting Files */,
 				D4B9F4351F47B01300579235 /* ViewControllers */,
 				D4B9F4241F47A59E00579235 /* Object Store */,
 				D4B9F4231F47A55C00579235 /* Model */,
@@ -99,6 +117,48 @@
 			path = iSaveThePrincess;
 			sourceTree = "<group>";
 		};
+		D4659DB81F4870E3007BF071 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D4659DB91F4870EA007BF071 /* Extensions */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D4659DB91F4870EA007BF071 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				D4659DBA1F487113007BF071 /* UIButton+Extension.swift */,
+				D4659DBC1F48753E007BF071 /* UIImage+Extension.swift */,
+				D4659DBE1F488B99007BF071 /* UIColor+Extension.swift */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
+		D4659DC21F48969C007BF071 /* Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				D4659DC31F4896D0007BF071 /* STPAddOrUpdateSoldierDelegate.swift */,
+			);
+			name = Delegate;
+			sourceTree = "<group>";
+		};
+		D4659DC51F48A75F007BF071 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D4659DC61F48A765007BF071 /* Cells */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		D4659DC61F48A765007BF071 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				D4659DC71F48A786007BF071 /* STPSoldierCollectionViewCell.swift */,
+			);
+			name = Cells;
+			sourceTree = "<group>";
+		};
 		D4B9F4131F47942400579235 /* Base */ = {
 			isa = PBXGroup;
 			children = (
@@ -106,6 +166,7 @@
 				D4B9F4171F4795E400579235 /* Info.plist */,
 				D4B9F4181F4795E400579235 /* STPAppDelegate.swift */,
 				D4B9F4331F47A92800579235 /* STPConstants.swift */,
+				D4659DC01F4892F3007BF071 /* STPUtils.swift */,
 			);
 			name = Base;
 			sourceTree = "<group>";
@@ -181,6 +242,8 @@
 		D4B9F4361F47B05000579235 /* Soldier */ = {
 			isa = PBXGroup;
 			children = (
+				D4659DC21F48969C007BF071 /* Delegate */,
+				D4659DB61F484C28007BF071 /* STPAddOrUpdateSoldierModalViewController.swift */,
 				D4B9F43C1F47B1EE00579235 /* STPSoldierCollectionViewController.swift */,
 			);
 			name = Soldier;
@@ -190,6 +253,7 @@
 			isa = PBXGroup;
 			children = (
 				D4B9F43F1F47B26100579235 /* STPBaseNavigationController.swift */,
+				D4659DB21F484A8F007BF071 /* STPOverlayedModalViewController.swift */,
 			);
 			name = Base;
 			sourceTree = "<group>";
@@ -319,12 +383,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				D4B9F42A1F47A65900579235 /* STPManagedSoldier.swift in Sources */,
+				D4659DC81F48A786007BF071 /* STPSoldierCollectionViewCell.swift in Sources */,
+				D4659DB71F484C28007BF071 /* STPAddOrUpdateSoldierModalViewController.swift in Sources */,
 				D4B9F4301F47A6C200579235 /* STPSoldier+Persistable.swift in Sources */,
+				D4659DC41F4896D0007BF071 /* STPAddOrUpdateSoldierDelegate.swift in Sources */,
+				D4659DBD1F48753E007BF071 /* UIImage+Extension.swift in Sources */,
+				D4659DBB1F487113007BF071 /* UIButton+Extension.swift in Sources */,
+				D4659DC11F4892F3007BF071 /* STPUtils.swift in Sources */,
 				D4B9F42C1F47A67800579235 /* STPRealmHelper.swift in Sources */,
 				D4B9F4341F47A92800579235 /* STPConstants.swift in Sources */,
 				D4B9F41A1F4795E400579235 /* STPAppDelegate.swift in Sources */,
 				D4B9F43D1F47B1EE00579235 /* STPSoldierCollectionViewController.swift in Sources */,
 				D4B9F4401F47B26100579235 /* STPBaseNavigationController.swift in Sources */,
+				D4659DBF1F488B99007BF071 /* UIColor+Extension.swift in Sources */,
+				D4659DB31F484A8F007BF071 /* STPOverlayedModalViewController.swift in Sources */,
 				D4B9F4321F47A6D300579235 /* STPSoldier.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

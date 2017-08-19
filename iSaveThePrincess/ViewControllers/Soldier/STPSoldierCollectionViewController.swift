@@ -26,11 +26,7 @@ class STPSoldierCollectionViewController: UIViewController {
         gradient.colors = Constants.kApplicationDarkerBlueGradientColors
         self.view.layer.insertSublayer(gradient, at: 0)
         
-        self.attackDoorButton.setTitle(Constants.kAttackTheDoorString, for: .normal)
-        self.attackDoorButton.setTitleColor(UIColor.white, for: .normal)
-        self.attackDoorButton.titleLabel?.font = Constants.kApplicationButtonFont
-        self.attackDoorButton.backgroundColor = Constants.kApplicationBlueTintColor
-        self.attackDoorButton.setCornerRadius(radius: 8.0)
+        self.attackDoorButton.createSTPBlueButton(withTitle: Constants.kAttackTheDoorString)
         
         self.barButtonItem.title = Constants.kAddString
         self.barButtonItem.setTitleTextAttributes([NSForegroundColorAttributeName: UIColor.white], for: .normal)
@@ -38,34 +34,63 @@ class STPSoldierCollectionViewController: UIViewController {
     
     // MARK: - Actions
     @IBAction func addButtonTapped(_ sender: Any) {
-        
-        
+        STPAddOrUpdateSoldierModalViewController.presentIn(self, delegate: self)
     }
     
     @IBAction func attackTheDoorButtonTapped(_ sender: Any) {
         
         guard STPRealmHelper.shared.storedSoldiers.count > 0 else {
             
-            let appearance: SCLAlertView.SCLAppearance = SCLAlertView.SCLAppearance(kDefaultShadowOpacity: 0.5,
-                                                                                    kTitleFont: Constants.kApplicationTitleFont,
-                                                                                    kTextFont: Constants.kApplicationStandardFont,
-                                                                                    kButtonFont: Constants.kApplicationButtonFont,
-                                                                                    hideWhenBackgroundViewIsTapped: true)
-            let alert = SCLAlertView(appearance: appearance)
-            
-            alert.showError(Constants.kErrorString,
-                            subTitle: Constants.kNoSoldierErrorMessage,
-                            closeButtonTitle: Constants.kOkString.uppercased())
-            
+            Utils.showErrorAlert(withMessage: Constants.kNoSoldierErrorMessageString)
             return
         }
+        
+        
     }
 }
 
 // MARK: - Collection View Delegate
 extension STPSoldierCollectionViewController: UICollectionViewDelegate {
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        let soldier = STPSoldier(managedObject: STPRealmHelper.shared.storedSoldiers[indexPath.row])
+        
+        STPAddOrUpdateSoldierModalViewController.presentIn(self,
+                                                           delegate: self,
+                                                           updatingSoldier: soldier)
+    }
+}
+
+// MARK: - Collection View Delegate Flow Layout
+extension STPSoldierCollectionViewController: UICollectionViewDelegateFlowLayout {
     
+    func collectionView(_ collectionView: UICollectionView,
+                        layout collectionViewLayout: UICollectionViewLayout,
+                        sizeForItemAt indexPath: IndexPath) -> CGSize {
+        
+        return CGSize(width: collectionView.size.width / 3, height: 158)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView,
+                        layout collectionViewLayout: UICollectionViewLayout,
+                        minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        
+        return 0.0
+    }
+    
+    func collectionView(_ collectionView: UICollectionView,
+                        layout collectionViewLayout: UICollectionViewLayout,
+                        minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        
+        return 0.0
+    }
+    
+    func collectionView(_ collectionView: UICollectionView,
+                        layout collectionViewLayout: UICollectionViewLayout,
+                        insetForSectionAt section: Int) -> UIEdgeInsets {
+        return UIEdgeInsetsMake(0.0, 0.0, 0.0, 0.0)
+    }
 }
 
 // MARK: - Collection View Data Source
@@ -94,6 +119,26 @@ extension STPSoldierCollectionViewController: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        return UICollectionViewCell()
+        
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "soldierCell", for: indexPath) as! STPSoldierCollectionViewCell
+        
+        let soldier = STPSoldier(managedObject: STPRealmHelper.shared.storedSoldiers[indexPath.row])
+
+        cell.soldierAgeLabel.text = "\(soldier.age)"
+        cell.soldierImageView.image = soldier.gender.associatedSpriteImage
+            .tinted(color: UIColor(hexString: soldier.color)!)
+        cell.soldierNameLabel.text = soldier.name
+        
+        return cell
+    }
+}
+
+// MARK: - Add or update Soldier Delegate
+extension STPSoldierCollectionViewController: STPAddOrUpdateSoldierDelegate {
+    
+    func didUpdateSoldiersList() {
+        DispatchQueue.main.async {
+            self.soldiersCollectionView.reloadData()
+        }
     }
 }

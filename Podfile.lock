@@ -1,4 +1,5 @@
 PODS:
+  - AKPickerView (0.2.7)
   - EZSwiftExtensions (1.10)
   - Realm (2.8.3):
     - Realm/Headers (= 2.8.3)
@@ -10,6 +11,7 @@ PODS:
   - SVColorPicker (2.0.1)
 
 DEPENDENCIES:
+  - AKPickerView
   - EZSwiftExtensions
   - RealmSwift
   - SCLAlertView
@@ -27,6 +29,7 @@ CHECKOUT OPTIONS:
     :git: https://github.com/MengTo/Spring.git
 
 SPEC CHECKSUMS:
+  AKPickerView: 125372e36fcc372216127600a541f14dcdbb7993
   EZSwiftExtensions: 172160bfb3635161c8b833d9111961ff3e6f517d
   Realm: 3601ef091c8c499a31101d8563b991e75546cdce
   RealmSwift: 8183818515471b01a99abdd2970f8e4fd52b6f4a
@@ -34,6 +37,6 @@ SPEC CHECKSUMS:
   Spring: 3f02b5dc3308572ef177b3cad0fa7bbc4b0706f7
   SVColorPicker: a19ab1b62ffc6cd446819908432c70f63c511171
 
-PODFILE CHECKSUM: a2db76bdaf9d1826efae497e9f14d208e81e0b71
+PODFILE CHECKSUM: e78ac759e07f8f30ac8e9b1ae2d72e8bf44accf8
 
 COCOAPODS: 1.2.1

@@ -35,10 +35,12 @@ enum STPSoldierGenderEnum: Int {
 // MARK: - Soldier model
 struct STPSoldier {
     
+    // Soldier index
+    var index: Int = 0
     // Soldier name
     var name: String = ""
-    //  Soldier color (will be formatted in hex, like #FFFFFF)
-    var color: String = "FFFFFF"
+    //  Soldier color (will be formatted in hex, like #0000FF)
+    var color: String = "FF0000"
     // Soldier gender (male, female or other)
     var gender: STPSoldierGenderEnum = .male
     // Soldier age

@@ -20,6 +20,11 @@ public final class STPRealmHelper {
     // List of soldiers in Realm
     lazy var storedSoldiers: Results<STPManagedSoldier> = { self.realm.objects(STPManagedSoldier.self) }()
     
+    // Auto-increment ID
+    func incrementID() -> Int {
+        return (STPRealmHelper.shared.realm.objects(STPManagedSoldier.self).max(ofProperty: "index") as Int? ?? 0) + 1
+    }
+    
     // Write function
     public func write(_ block: (STPWriteTransaction) throws -> Void) throws {
         let transaction = STPWriteTransaction()
@@ -32,10 +37,6 @@ public final class STPRealmHelper {
 public final class STPWriteTransaction {
     public func add<T: STPPersistable>(_ value: T, update: Bool) {
         STPRealmHelper.shared.realm.add(value.managedObject(), update: update)
-    }
-    
-    public func remove<T: STPPersistable>(_ value: T) {
-        STPRealmHelper.shared.realm.delete(value.managedObject())
     }
 }
 
@@ -69,18 +70,19 @@ extension STPRealmHelper {
     
     /**
      Remove a soldier from Realm
-     @param soldier The soldier
+     @param index The soldier's index
      @return If Realm transaction was successful
      */
-    func removeSoldier(_ soldier: STPSoldier) -> Bool {
+    func removeSoldier(_ index: Int) -> Bool {
         
         do {
-            try STPRealmHelper.shared.write({ (transaction) in
-                transaction.remove(soldier)
-            })
-            return true
+            try realm.write {
+                realm.delete(realm.objects(STPManagedSoldier.self).filter("index=\(index)"))
+            }
         } catch {
             return false
         }
+        
+        return true
     }
 }

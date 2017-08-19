@@ -7,4 +7,5 @@ target 'iSaveThePrincess' do
    pod 'EZSwiftExtensions'
    pod 'SCLAlertView'
    pod 'SVColorPicker', '2.0.1'
+   pod 'AKPickerView'
 end

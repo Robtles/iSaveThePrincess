@@ -11,8 +11,13 @@ import RealmSwift
 // MARK: - Realm Managed Soldier
 class STPManagedSoldier: Object {
 
+    dynamic var index: Int = 0
     dynamic var name: String = ""
     dynamic var color: String = "FFFFFF"
     dynamic var gender: Int = STPSoldierGenderEnum.male.rawValue
     dynamic var age: Int = 20
+    
+    override class func primaryKey() -> String? {
+        return "index"
+    }
 }

@@ -16,6 +16,7 @@ extension STPSoldier: STPPersistable {
         self.color = managedObject.color
         self.gender = STPSoldierGenderEnum(rawValue: managedObject.gender)!
         self.age = managedObject.age
+        self.index = managedObject.index
     }
     
     // Persist current object into Realm
@@ -27,6 +28,7 @@ extension STPSoldier: STPPersistable {
         managedSoldier.color = self.color
         managedSoldier.gender = self.gender.rawValue
         managedSoldier.age = self.age
+        managedSoldier.index = self.index
         
         return managedSoldier
     }
