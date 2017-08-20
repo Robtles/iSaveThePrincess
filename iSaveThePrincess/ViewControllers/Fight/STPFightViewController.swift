@@ -20,6 +20,14 @@ class STPFightViewController: UIViewController {
     @IBOutlet weak var leaveFightButton: UIButton!
     @IBOutlet weak var attackButton: UIButton!
     
+    // Constraints needed for animations
+    @IBOutlet weak var soldierVerticalConstraint: NSLayoutConstraint!
+    @IBOutlet weak var soldierHorizontalConstraint: NSLayoutConstraint!
+    @IBOutlet weak var doorVerticalConstraint: NSLayoutConstraint!
+    @IBOutlet weak var doorHorizontalConstraint: NSLayoutConstraint!
+    @IBOutlet weak var soldierRemovedBarViewWidth: NSLayoutConstraint!
+    @IBOutlet weak var doorRemovedBarViewWidth: NSLayoutConstraint!
+    
     @IBOutlet weak var soldierCardView: STPFighterHPCardView!
     @IBOutlet weak var doorCardView: STPFighterHPCardView!
     
@@ -46,7 +54,7 @@ class STPFightViewController: UIViewController {
         self.soldierCardView.setupCard((self.battleManager?.soldier.name)!, hpAmount: (self.battleManager?.soldier.hp)!)
         self.doorCardView.setupCard(Constants.kDoorString, hpAmount: (self.battleManager?.door.durability)!)
     }
-    
+
     // MARK: - Actions
     @IBAction func leaveButtonTapped(_ sender: Any) {
     
@@ -71,6 +79,58 @@ class STPFightViewController: UIViewController {
     }
     
     @IBAction func attackButtonTapped(_ sender: Any) {
+        
+        self.attack(fromSoldier: true) {
+            
+            if self.battleManager!.doorIsKO() {
+                self.showEndBattleAlert(Constants.kWinString, message: Constants.kWinMessageString)
+            } else {
+                
+                // CPU door attacks!
+                Utils.delay(1.0, completion: {
+                    
+                    self.attack(fromSoldier: false) {
+                        
+                        if self.battleManager!.soldierIsKO() {
+                            self.showEndBattleAlert(Constants.kLoseString, message: Constants.kLoseMessageString)
+                        } else {
+                            self.attackButton.isHidden = false
+                        }
+                    }
+                })
+            }
+        }
+    }
     
+    private func attack(fromSoldier: Bool,
+                        _ completion: @escaping () -> Void) {
+        
+        let lostPoints: Int! = self.battleManager?.attack(fromSoldier: fromSoldier)
+        self.animateAttack(fromSoldier: fromSoldier, lostPoints: lostPoints) {
+            
+            completion()
+        }
+    }
+    
+    private func showEndBattleAlert(_ title: String,
+                                    message: String) {
+        
+        self.view.isUserInteractionEnabled = false
+        
+        let appearance: SCLAlertView.SCLAppearance = SCLAlertView.SCLAppearance(kDefaultShadowOpacity: 0.5,
+                                                                                kTitleFont: Constants.kApplicationTitleFont,
+                                                                                kTextFont: Constants.kApplicationStandardFont,
+                                                                                kButtonFont: Constants.kApplicationButtonFont,
+                                                                                hideWhenBackgroundViewIsTapped: false)
+        let alert = SCLAlertView(appearance: appearance)
+        
+        alert.showInfo(title,
+                       subTitle: message,
+                       closeButtonTitle: Constants.kBackString,
+                       colorStyle: 0x07BDF7)
+            .setDismissBlock {
+                
+            self.dismiss(animated: true, completion: nil)
+        }
     }
 }

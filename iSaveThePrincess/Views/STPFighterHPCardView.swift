@@ -45,4 +45,21 @@ class STPFighterHPCardView: UIView {
         self.fighterNameLabel.text = fighterName.uppercased()
         self.currentHPAmountLabel.text = "HP: \(hpAmount)"
     }
+    
+    func updateHPAmountLabel(_ hpAmount: Int) {
+        self.currentHPAmountLabel.text = "HP: \(hpAmount)"
+    }
+    
+    func updateHPBarColor(_ hpFraction: CGFloat) {
+        
+        if hpFraction >= 0.5 {
+            self.hpRemainingBarView.backgroundColor = UIColor.green
+            return
+        }
+        if hpFraction >= 0.2 {
+            self.hpRemainingBarView.backgroundColor = UIColor.yellow
+            return
+        }
+        self.hpRemainingBarView.backgroundColor = UIColor.red
+    }
 }

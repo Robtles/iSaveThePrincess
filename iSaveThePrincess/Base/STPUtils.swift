@@ -25,4 +25,12 @@ struct Utils {
                         subTitle: message,
                         closeButtonTitle: closeButtonTitle)
     }
+    
+    static public func delay(_ seconds: Double, completion:@escaping ()->()) {
+        let popTime = DispatchTime.now() + Double(Int64( Double(NSEC_PER_SEC) * seconds )) / Double(NSEC_PER_SEC)
+        
+        DispatchQueue.main.asyncAfter(deadline: popTime) {
+            completion()
+        }
+    }
 }

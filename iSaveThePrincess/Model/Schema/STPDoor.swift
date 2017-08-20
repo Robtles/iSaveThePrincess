@@ -9,5 +9,5 @@
 struct STPDoor {
     
     // Door durability (100 pts)
-    var durability: Int = 100
+    var durability: Int = Int(Constants.kDoorDurability)
 }

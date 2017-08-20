@@ -19,6 +19,12 @@ struct Constants {
     // Range of possible ages for a soldier
     static let kSoldierAges: [Int] = Array(10...40)
     
+    // HP bar width constant
+    static let kHPBarWidth: CGFloat = 126.0
+    
+    // Door durability
+    static let kDoorDurability: CGFloat = 100.0
+    
     /**********
      * SEGUES
      **********/
@@ -45,6 +51,9 @@ struct Constants {
     // Attack String
     static let kAttackString = "Attack!"
     
+    // Is attacking String
+    static let kIsAttacking = "is attacking!"
+    
     // It's your turn, attack the Door String
     static let kItsYourTurnAttackTheDoorString = "It's your turn. Attack the Door!"
     
@@ -68,6 +77,18 @@ struct Constants {
     
     // What to do with this soldier String
     static let kWhatToDoWithSoldier = "What do you want to do with this soldier?"
+    
+    // You win String
+    static let kWinString = "You win!"
+    
+    // You lose String
+    static let kLoseString = "You lose!"
+    
+    // Win message String
+    static let kWinMessageString = "The Princess is saved, Congratulations! 😁"
+    
+    // Lose message String
+    static let kLoseMessageString = "Try again! The Princess doesn't want to stay with Bowser 😉"
     
     // Confirm String
     static let kConfirmString = "Confirm"

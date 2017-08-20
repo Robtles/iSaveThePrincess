@@ -22,6 +22,7 @@
 		D4659DC11F4892F3007BF071 /* STPUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4659DC01F4892F3007BF071 /* STPUtils.swift */; };
 		D4659DC41F4896D0007BF071 /* STPAddOrUpdateSoldierDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4659DC31F4896D0007BF071 /* STPAddOrUpdateSoldierDelegate.swift */; };
 		D4659DC81F48A786007BF071 /* STPSoldierCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4659DC71F48A786007BF071 /* STPSoldierCollectionViewCell.swift */; };
+		D4B83A4E1F4919510053E40D /* STPFightViewController+BattleAnimations.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B83A4D1F4919510053E40D /* STPFightViewController+BattleAnimations.swift */; };
 		D4B9F41A1F4795E400579235 /* STPAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B9F4181F4795E400579235 /* STPAppDelegate.swift */; };
 		D4B9F41C1F47961D00579235 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4B9F41B1F47961D00579235 /* Assets.xcassets */; };
 		D4B9F41F1F47962500579235 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4B9F41D1F47962500579235 /* LaunchScreen.storyboard */; };
@@ -33,6 +34,7 @@
 		D4B9F4341F47A92800579235 /* STPConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B9F4331F47A92800579235 /* STPConstants.swift */; };
 		D4B9F43D1F47B1EE00579235 /* STPSoldierCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B9F43C1F47B1EE00579235 /* STPSoldierCollectionViewController.swift */; };
 		D4B9F4401F47B26100579235 /* STPBaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B9F43F1F47B26100579235 /* STPBaseNavigationController.swift */; };
+		D4F4FCA81F4995B3007A010F /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F4FCA71F4995B3007A010F /* UIView+Extension.swift */; };
 		EE1DC0A98C6DE0A815594F7A /* Pods_iSaveThePrincess.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8922BDC9FEB38B24DDBF4AB /* Pods_iSaveThePrincess.framework */; };
 /* End PBXBuildFile section */
 
@@ -56,6 +58,7 @@
 		D4659DC01F4892F3007BF071 /* STPUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = STPUtils.swift; path = Base/STPUtils.swift; sourceTree = "<group>"; };
 		D4659DC31F4896D0007BF071 /* STPAddOrUpdateSoldierDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = STPAddOrUpdateSoldierDelegate.swift; sourceTree = "<group>"; };
 		D4659DC71F48A786007BF071 /* STPSoldierCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = STPSoldierCollectionViewCell.swift; path = Views/Cells/STPSoldierCollectionViewCell.swift; sourceTree = "<group>"; };
+		D4B83A4D1F4919510053E40D /* STPFightViewController+BattleAnimations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "STPFightViewController+BattleAnimations.swift"; path = "ViewControllers/Fight/STPFightViewController+BattleAnimations.swift"; sourceTree = "<group>"; };
 		D4B9F4171F4795E400579235 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Base/Info.plist; sourceTree = "<group>"; };
 		D4B9F4181F4795E400579235 /* STPAppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = STPAppDelegate.swift; path = Base/STPAppDelegate.swift; sourceTree = "<group>"; };
 		D4B9F41B1F47961D00579235 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = Base/Assets.xcassets; sourceTree = "<group>"; };
@@ -68,6 +71,7 @@
 		D4B9F4331F47A92800579235 /* STPConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = STPConstants.swift; path = Base/STPConstants.swift; sourceTree = "<group>"; };
 		D4B9F43C1F47B1EE00579235 /* STPSoldierCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = STPSoldierCollectionViewController.swift; path = ViewControllers/Soldier/STPSoldierCollectionViewController.swift; sourceTree = "<group>"; };
 		D4B9F43F1F47B26100579235 /* STPBaseNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = STPBaseNavigationController.swift; path = ViewControllers/Base/STPBaseNavigationController.swift; sourceTree = "<group>"; };
+		D4F4FCA71F4995B3007A010F /* UIView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIView+Extension.swift"; path = "Supporting Files/Extensions/UIView+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +140,7 @@
 			isa = PBXGroup;
 			children = (
 				D45A5EA21F48E19C0085D45E /* STPFightViewController.swift */,
+				D4B83A4D1F4919510053E40D /* STPFightViewController+BattleAnimations.swift */,
 			);
 			name = Fight;
 			sourceTree = "<group>";
@@ -162,6 +167,7 @@
 				D4659DBA1F487113007BF071 /* UIButton+Extension.swift */,
 				D4659DBC1F48753E007BF071 /* UIImage+Extension.swift */,
 				D4659DBE1F488B99007BF071 /* UIColor+Extension.swift */,
+				D4F4FCA71F4995B3007A010F /* UIView+Extension.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -330,7 +336,6 @@
 				TargetAttributes = {
 					D4346F091F47442E00A4099F = {
 						CreatedOnToolsVersion = 8.3.2;
-						DevelopmentTeam = SRD9PR5GCG;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -429,6 +434,7 @@
 				D4659DC41F4896D0007BF071 /* STPAddOrUpdateSoldierDelegate.swift in Sources */,
 				D45A5EA51F48E2FE0085D45E /* STPFightBackgroundView.swift in Sources */,
 				D4659DBD1F48753E007BF071 /* UIImage+Extension.swift in Sources */,
+				D4B83A4E1F4919510053E40D /* STPFightViewController+BattleAnimations.swift in Sources */,
 				D4659DBB1F487113007BF071 /* UIButton+Extension.swift in Sources */,
 				D4659DC11F4892F3007BF071 /* STPUtils.swift in Sources */,
 				D4B9F42C1F47A67800579235 /* STPRealmHelper.swift in Sources */,
@@ -441,6 +447,7 @@
 				D4659DBF1F488B99007BF071 /* UIColor+Extension.swift in Sources */,
 				D4659DB31F484A8F007BF071 /* STPOverlayedModalViewController.swift in Sources */,
 				D4B9F4321F47A6D300579235 /* STPSoldier.swift in Sources */,
+				D4F4FCA81F4995B3007A010F /* UIView+Extension.swift in Sources */,
 				D45A5EA01F48DB0B0085D45E /* STPGetReadyView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -546,7 +553,7 @@
 			baseConfigurationReference = 72558DA014AB1D11D2381520 /* Pods-iSaveThePrincess.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = SRD9PR5GCG;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = iSaveThePrincess/Base/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -561,7 +568,7 @@
 			baseConfigurationReference = 73F64B2EF26F16568EC34E27 /* Pods-iSaveThePrincess.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = SRD9PR5GCG;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = iSaveThePrincess/Base/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
