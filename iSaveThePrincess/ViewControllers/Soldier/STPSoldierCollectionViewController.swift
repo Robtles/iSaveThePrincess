@@ -15,6 +15,8 @@ class STPSoldierCollectionViewController: UIViewController {
     @IBOutlet weak var barButtonItem: UIBarButtonItem!
     @IBOutlet weak var getReadyView: STPGetReadyView!
     
+    var selectedSoldier: STPSoldier?
+    
     // MARK: - Application lifecycle
     override func viewDidLoad() {
         
@@ -81,13 +83,24 @@ class STPSoldierCollectionViewController: UIViewController {
         
         alert.showInfo(soldier.name,
                        subTitle: Constants.kWhatToDoWithSoldier,
-                       closeButtonTitle: Constants.kNBackString,
+                       closeButtonTitle: Constants.kBackString,
                        colorStyle: 0x07BDF7)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == Constants.kToBattleScreenSegue {
+            
+            let destination = segue.destination as! STPFightViewController
+            destination.battleManager = STPBattleManager(withSoldier: self.selectedSoldier!)
+        }
     }
     
     private func prepareFight(withSoldier soldier: STPSoldier) {
         
+        self.selectedSoldier = soldier
         self.getReadyView.isHidden = false
+        self.getReadyView.alpha = 0.3
         
         UIView.animate(withDuration: 2.0, animations: {
             self.getReadyView.alpha = 1.0

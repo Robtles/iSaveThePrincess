@@ -99,7 +99,7 @@ class STPAddOrUpdateSoldierModalViewController: STPOverlayedModalViewController 
         self.soldierAgeContainerView.addSubview(self.soldierAgePickerView)
         
         let title = (self.isUpdatingSoldier) ? Constants.kUpdateString : Constants.kCreateString
-        self.updateOrAddButton.createSTPBlueButton(withTitle: title)
+        self.updateOrAddButton.createSTPButton(withTitle: title)
     }
     
     static func presentIn(_ viewController: UIViewController,

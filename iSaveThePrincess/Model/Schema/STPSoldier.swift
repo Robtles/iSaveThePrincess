@@ -43,7 +43,7 @@ enum STPSoldierGenderEnum: Int {
 }
 
 // MARK: - Soldier model
-struct STPSoldier {
+struct STPSoldier: STPSoldierProtocol {
     
     // Soldier index
     var index: Int = 0
@@ -55,4 +55,12 @@ struct STPSoldier {
     var gender: STPSoldierGenderEnum = .male
     // Soldier age
     var age: Int = 20
+}
+
+protocol STPSoldierProtocol {
+    
+    var name: String { get set }
+    var color: String { get set }
+    var gender: STPSoldierGenderEnum { get set }
+    var age: Int { get set }
 }

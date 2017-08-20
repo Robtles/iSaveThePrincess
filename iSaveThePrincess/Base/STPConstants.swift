@@ -33,14 +33,35 @@ struct Constants {
     // Soldiers String
     static let kSoldiersString = "Soldiers"
     
+    // Leave the battle String
+    static let kLeaveTheBattleString = "Leave the battle"
+    
+    // Do you want to leave the battle String
+    static let kDoYouWantToLeaveTheBattleString = "Do you really want to cowardly leave the battle? 😑"
+    
     // Attack the Door String
     static let kAttackTheDoorString = "Attack the Door!"
+    
+    // Attack String
+    static let kAttackString = "Attack!"
+    
+    // It's your turn, attack the Door String
+    static let kItsYourTurnAttackTheDoorString = "It's your turn. Attack the Door!"
+    
+    // Leave Fight String
+    static let kLeaveFightString = "Leave the fight?"
+    
+    // Leave String
+    static let kLeaveString = "Leave"
     
     // Add String
     static let kAddString = "Add"
     
     // Error String
     static let kErrorString = "Error"
+    
+    // Door String
+    static let kDoorString = "Door"
     
     // Delete this soldier String
     static let kDeleteThisSoldierString = "Delete this soldier"
@@ -50,12 +71,15 @@ struct Constants {
     
     // Confirm String
     static let kConfirmString = "Confirm"
+
+    // Yes String
+    static let kYesString = "Yes"
     
     // No String
     static let kNoString = "No"
     
     // Back String
-    static let kNBackString = "Back"
+    static let kBackString = "Back"
     
     // Soldier Name String
     static let kSoldierNameString = "Soldier name"
@@ -116,9 +140,18 @@ struct Constants {
     // Application darker text color
     static let kApplicationDarkerTextColor = UIColor(hexString: "121212")
     
+    // Application fighter HP card background color
+    static let kFighterHPCardBackgroundColor = UIColor(hexString: "F6EBD5")
+    
     // Application darker blue gradient
     static let kApplicationDarkerBlueGradientColors: [CGColor] = [UIColor.blue.cgColor,
                                                                   UIColor.black.cgColor]
+    
+    static let kApplicationFightBackgroundGradientColors: [CGColor] = [(UIColor(hexString: "7A5B41")?.cgColor)!,
+                                                                       (UIColor(hexString: "ECC19C")?.cgColor)!,
+                                                                       (UIColor(hexString: "F4CEAC")?.cgColor)!,
+                                                                       (UIColor(hexString: "ECC19C")?.cgColor)!,
+                                                                       (UIColor(hexString: "7A5B41")?.cgColor)!]
     
     // Soldier gender associated symbols colors
     static let kSoldierAssociatedSymbolsColors: [UIColor] = [UIColor.blue,
@@ -134,6 +167,12 @@ struct Constants {
     
     // Application button font
     static let kApplicationButtonFont = UIFont.boldSystemFont(ofSize: 18.0)
+    
+    // Bigger standard font
+    static let kApplicationBiggerStandardFont = UIFont.systemFont(ofSize: 16.0)
+    
+    // Semibold bigger header font
+    static let kSemiboldBiggerHeaderFont = UIFont.systemFont(ofSize: 15.0, weight: UIFontWeightSemibold)
     
     // Standard font
     static let kApplicationStandardFont = UIFont.systemFont(ofSize: 14.0)

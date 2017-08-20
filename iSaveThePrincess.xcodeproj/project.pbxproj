@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		D45A5EA01F48DB0B0085D45E /* STPGetReadyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45A5E9F1F48DB0B0085D45E /* STPGetReadyView.swift */; };
+		D45A5EA31F48E19C0085D45E /* STPFightViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45A5EA21F48E19C0085D45E /* STPFightViewController.swift */; };
+		D45A5EA51F48E2FE0085D45E /* STPFightBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45A5EA41F48E2FE0085D45E /* STPFightBackgroundView.swift */; };
+		D45A5EA71F48F02C0085D45E /* STPSoldierInBattle.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45A5EA61F48F02C0085D45E /* STPSoldierInBattle.swift */; };
+		D45A5EAA1F48F19F0085D45E /* STPBattleManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45A5EA91F48F19F0085D45E /* STPBattleManager.swift */; };
+		D45A5EAC1F48F1C60085D45E /* STPDoor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45A5EAB1F48F1C60085D45E /* STPDoor.swift */; };
+		D45A5EAE1F48FB8E0085D45E /* STPFighterHPCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45A5EAD1F48FB8E0085D45E /* STPFighterHPCardView.swift */; };
 		D4659DB31F484A8F007BF071 /* STPOverlayedModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4659DB21F484A8F007BF071 /* STPOverlayedModalViewController.swift */; };
 		D4659DB71F484C28007BF071 /* STPAddOrUpdateSoldierModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4659DB61F484C28007BF071 /* STPAddOrUpdateSoldierModalViewController.swift */; };
 		D4659DBB1F487113007BF071 /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4659DBA1F487113007BF071 /* UIButton+Extension.swift */; };
@@ -36,6 +42,12 @@
 		C8922BDC9FEB38B24DDBF4AB /* Pods_iSaveThePrincess.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iSaveThePrincess.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4346F0A1F47442E00A4099F /* iSaveThePrincess.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iSaveThePrincess.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D45A5E9F1F48DB0B0085D45E /* STPGetReadyView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = STPGetReadyView.swift; path = Views/STPGetReadyView.swift; sourceTree = "<group>"; };
+		D45A5EA21F48E19C0085D45E /* STPFightViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = STPFightViewController.swift; path = ViewControllers/Fight/STPFightViewController.swift; sourceTree = "<group>"; };
+		D45A5EA41F48E2FE0085D45E /* STPFightBackgroundView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = STPFightBackgroundView.swift; path = Views/STPFightBackgroundView.swift; sourceTree = "<group>"; };
+		D45A5EA61F48F02C0085D45E /* STPSoldierInBattle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = STPSoldierInBattle.swift; path = Model/Schema/STPSoldierInBattle.swift; sourceTree = "<group>"; };
+		D45A5EA91F48F19F0085D45E /* STPBattleManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = STPBattleManager.swift; path = Managers/STPBattleManager.swift; sourceTree = "<group>"; };
+		D45A5EAB1F48F1C60085D45E /* STPDoor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = STPDoor.swift; path = Model/Schema/STPDoor.swift; sourceTree = "<group>"; };
+		D45A5EAD1F48FB8E0085D45E /* STPFighterHPCardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = STPFighterHPCardView.swift; path = Views/STPFighterHPCardView.swift; sourceTree = "<group>"; };
 		D4659DB21F484A8F007BF071 /* STPOverlayedModalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = STPOverlayedModalViewController.swift; path = ViewControllers/Base/STPOverlayedModalViewController.swift; sourceTree = "<group>"; };
 		D4659DB61F484C28007BF071 /* STPAddOrUpdateSoldierModalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = STPAddOrUpdateSoldierModalViewController.swift; path = ViewControllers/Soldier/STPAddOrUpdateSoldierModalViewController.swift; sourceTree = "<group>"; };
 		D4659DBA1F487113007BF071 /* UIButton+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIButton+Extension.swift"; path = "Supporting Files/Extensions/UIButton+Extension.swift"; sourceTree = "<group>"; };
@@ -108,6 +120,7 @@
 		D4346F0C1F47442E00A4099F /* iSaveThePrincess */ = {
 			isa = PBXGroup;
 			children = (
+				D45A5EA81F48F1750085D45E /* Managers */,
 				D4659DC51F48A75F007BF071 /* Views */,
 				D4659DB81F4870E3007BF071 /* Supporting Files */,
 				D4B9F4351F47B01300579235 /* ViewControllers */,
@@ -117,6 +130,22 @@
 				D4B9F4131F47942400579235 /* Base */,
 			);
 			path = iSaveThePrincess;
+			sourceTree = "<group>";
+		};
+		D45A5EA11F48E1770085D45E /* Fight */ = {
+			isa = PBXGroup;
+			children = (
+				D45A5EA21F48E19C0085D45E /* STPFightViewController.swift */,
+			);
+			name = Fight;
+			sourceTree = "<group>";
+		};
+		D45A5EA81F48F1750085D45E /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				D45A5EA91F48F19F0085D45E /* STPBattleManager.swift */,
+			);
+			name = Managers;
 			sourceTree = "<group>";
 		};
 		D4659DB81F4870E3007BF071 /* Supporting Files */ = {
@@ -150,6 +179,8 @@
 			children = (
 				D4659DC61F48A765007BF071 /* Cells */,
 				D45A5E9F1F48DB0B0085D45E /* STPGetReadyView.swift */,
+				D45A5EA41F48E2FE0085D45E /* STPFightBackgroundView.swift */,
+				D45A5EAD1F48FB8E0085D45E /* STPFighterHPCardView.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -229,6 +260,8 @@
 			isa = PBXGroup;
 			children = (
 				D4B9F4311F47A6D300579235 /* STPSoldier.swift */,
+				D45A5EA61F48F02C0085D45E /* STPSoldierInBattle.swift */,
+				D45A5EAB1F48F1C60085D45E /* STPDoor.swift */,
 			);
 			name = Schema;
 			sourceTree = "<group>";
@@ -236,6 +269,7 @@
 		D4B9F4351F47B01300579235 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				D45A5EA11F48E1770085D45E /* Fight */,
 				D4B9F43E1F47B24C00579235 /* Base */,
 				D4B9F4361F47B05000579235 /* Soldier */,
 			);
@@ -386,10 +420,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				D4B9F42A1F47A65900579235 /* STPManagedSoldier.swift in Sources */,
+				D45A5EAE1F48FB8E0085D45E /* STPFighterHPCardView.swift in Sources */,
 				D4659DC81F48A786007BF071 /* STPSoldierCollectionViewCell.swift in Sources */,
 				D4659DB71F484C28007BF071 /* STPAddOrUpdateSoldierModalViewController.swift in Sources */,
+				D45A5EA71F48F02C0085D45E /* STPSoldierInBattle.swift in Sources */,
 				D4B9F4301F47A6C200579235 /* STPSoldier+Persistable.swift in Sources */,
+				D45A5EAC1F48F1C60085D45E /* STPDoor.swift in Sources */,
 				D4659DC41F4896D0007BF071 /* STPAddOrUpdateSoldierDelegate.swift in Sources */,
+				D45A5EA51F48E2FE0085D45E /* STPFightBackgroundView.swift in Sources */,
 				D4659DBD1F48753E007BF071 /* UIImage+Extension.swift in Sources */,
 				D4659DBB1F487113007BF071 /* UIButton+Extension.swift in Sources */,
 				D4659DC11F4892F3007BF071 /* STPUtils.swift in Sources */,
@@ -398,6 +436,8 @@
 				D4B9F41A1F4795E400579235 /* STPAppDelegate.swift in Sources */,
 				D4B9F43D1F47B1EE00579235 /* STPSoldierCollectionViewController.swift in Sources */,
 				D4B9F4401F47B26100579235 /* STPBaseNavigationController.swift in Sources */,
+				D45A5EAA1F48F19F0085D45E /* STPBattleManager.swift in Sources */,
+				D45A5EA31F48E19C0085D45E /* STPFightViewController.swift in Sources */,
 				D4659DBF1F488B99007BF071 /* UIColor+Extension.swift in Sources */,
 				D4659DB31F484A8F007BF071 /* STPOverlayedModalViewController.swift in Sources */,
 				D4B9F4321F47A6D300579235 /* STPSoldier.swift in Sources */,

@@ -11,12 +11,13 @@ import UIKit
 extension UIButton {
     
     // Helper function to create a blue button with a given title and a 8px corner radius
-    open func createSTPBlueButton(withTitle title: String) {
+    open func createSTPButton(withTitle title: String,
+                              andColor color: UIColor = Constants.kApplicationBlueTintColor!) {
         
         self.setTitle(title, for: .normal)
         self.setTitleColor(UIColor.white, for: .normal)
         self.titleLabel?.font = Constants.kApplicationButtonFont
-        self.backgroundColor = Constants.kApplicationBlueTintColor
+        self.backgroundColor = color
         self.setCornerRadius(radius: 8.0)
     }
 }
